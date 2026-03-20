@@ -1,0 +1,46 @@
+{
+  "name": "tp_ihm_clone_github",
+  "version": "1.0.0",
+  "description": "Clone de GitHub - TP Interface Homme-Machine",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vicky197709/TP_IHM_clone_github.git"
+  },
+  "keywords": [
+    "github",
+    "clone",
+    "react",
+    "typescript",
+    "vite",
+    "ihm"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vicky197709/TP_IHM_clone_github/issues"
+  },
+  "homepage": "https://github.com/Vicky197709/TP_IHM_clone_github#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.9.3",
+    "vite": "^4.5.2",
+    "lucide-react": "^0.577.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@types/node": "^20.11.24",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}
