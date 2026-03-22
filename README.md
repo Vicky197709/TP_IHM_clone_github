@@ -109,32 +109,75 @@ src/
 └── assets/             # Images et autres ressources statiques
 ```
 
-## 📋 Fonctionnalités à Implémenter
+## 🌐 Guide de Navigation
 
-### Phase 1: Structure de Base
-- [x] Initialisation du projet
-- [x] Configuration de l'environnement
-- [ ] Header avec navigation
-- [ ] Sidebar principale
-- [ ] Page d'accueil
+### Pages Principales
+- **Accueil** : `http://localhost:3000/`
+- **Login** : `http://localhost:3000/login`
+- **Signup** : `http://localhost:3000/signup`
+- **Dashboard** : `http://localhost:3000/dashboard`
 
-### Phase 2: Gestion des Repositories
-- [ ] Liste des repositories
-- [ ] Création de repository
-- [ ] Détails d'un repository
-- [ ] Fichiers et dossiers
+### Pages Utilisateur
+- **Profile** : `http://localhost:3000/Vicky197709`
+- **Settings** : `http://localhost:3000/settings`
+- **Settings (avec onglet)** : `http://localhost:3000/settings/profile`
 
-### Phase 3: Fonctionnalités Sociales
-- [ ] Profil utilisateur
-- [ ] Système de followers
-- [ ] Issues et Pull Requests
-- [ ] Actions sur les repositories
+### Pages Repository
+- **Repository** : `http://localhost:3000/Vicky197709/TP_POO_Java`
+- **Issues** : `http://localhost:3000/Vicky197709/TP_POO_Java/issues`
+- **Pull Requests** : `http://localhost:3000/Vicky197709/TP_POO_Java/pulls`
 
-### Phase 4: Fonctionnalités Avancées
-- [ ] Recherche
-- [ ] Notifications
-- [ ] Thème sombre/clair
-- [ ] Responsive design
+### Pages Organisation
+- **Organisation** : `http://localhost:3000/organizations/acme-corp`
+
+### Pages Marketplace
+- **Marketplace** : `http://localhost:3000/marketplace`
+
+### Pages Features GitHub (Haute Priorité)
+- **Copilot** : `http://localhost:3000/features/copilot`
+- **Actions** : `http://localhost:3000/features/actions`
+- **Codespaces** : `http://localhost:3000/features/codespaces`
+- **Packages** : `http://localhost:3000/features/packages`
+- **Security** : `http://localhost:3000/features/security`
+- **Code Search** : `http://localhost:3000/features/code-search`
+
+### Navigation depuis le Header
+Les menus dropdown dans le header pointent vers ces URLs :
+- **Product → Copilot** : `/features/copilot`
+- **Product → Actions** : `/features/actions`
+- **Product → Codespaces** : `/features/codespaces`
+- **Product → Packages** : `/features/packages`
+- **Product → Security** : `/features/security`
+- **Open Source → Marketplace** : `/marketplace`
+
+## 📋 Fonctionnalités Implémentées
+
+### ✅ Pages Complètes
+- [x] Page d'accueil avec hero section
+- [x] Login et Signup avec validation
+- [x] Dashboard utilisateur avec activité récente
+- [x] Profile utilisateur avec repositories
+- [x] Repository avec code, issues, PR
+- [x] Issues avec filtres et recherche
+- [x] Pull Requests avec états
+- [x] Settings avec multiples onglets
+- [x] Organisation avec équipes et membres
+- [x] Marketplace avec catégories
+- [x] Copilot (assistant IA)
+- [x] Actions (CI/CD)
+- [x] Codespaces (dev cloud)
+- [x] Packages (registry)
+- [x] Security (vulnerability scanning)
+- [x] Code Search (recherche avancée)
+
+### ✅ Fonctionnalités Globales
+- [x] Navigation complète avec menus dropdown
+- [x] Dark mode avec toggle
+- [x] Routing SPA avec React Router
+- [x] Design responsive mobile/desktop
+- [x] Header GitHub-like avec recherche
+- [x] User dropdown avec tous les liens
+- [x] Thème avec détection système
 
 ## 🎨 Design System
 
