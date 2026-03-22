@@ -10,6 +10,12 @@ import PullRequestsPage from './pages/PullRequestsPage'
 import SettingsPage from './pages/SettingsPage'
 import OrganizationPage from './pages/OrganizationPage'
 import MarketplacePage from './pages/MarketplacePage'
+import CopilotPage from './pages/CopilotPage'
+import ActionsPage from './pages/ActionsPage'
+import CodespacesPage from './pages/CodespacesPage'
+import PackagesPage from './pages/PackagesPage'
+import SecurityPage from './pages/SecurityPage'
+import CodeSearchPage from './pages/CodeSearchPage'
 
 function App() {
   return (
@@ -24,6 +30,12 @@ function App() {
           <Route path="/settings/:tab" element={<SettingsPage />} />
           <Route path="/marketplace" element={<MarketplacePage />} />
           <Route path="/organizations/:orgName" element={<OrganizationPage />} />
+          <Route path="/features/copilot" element={<CopilotPage />} />
+          <Route path="/features/actions" element={<ActionsPage />} />
+          <Route path="/features/codespaces" element={<CodespacesPage />} />
+          <Route path="/features/packages" element={<PackagesPage />} />
+          <Route path="/features/security" element={<SecurityPage />} />
+          <Route path="/features/code-search" element={<CodeSearchPage />} />
           <Route path="/:username" element={<ProfilePage />} />
           <Route path="/:username/:repoName" element={<RepositoryPage />} />
           <Route path="/:username/:repoName/issues" element={<IssuesPage />} />
