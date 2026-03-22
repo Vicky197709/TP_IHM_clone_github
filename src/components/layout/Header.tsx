@@ -1,9 +1,12 @@
-import { Search, Bell, Plus, ChevronDown } from 'lucide-react'
+import { Search, Bell, Plus } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import ThemeToggle from '../common/ThemeToggle'
+import NavigationMenu from './NavigationMenu'
+import UserDropdown from './UserDropdown'
 
 export default function Header() {
   return (
-    <header className="bg-gray-900 text-white">
+    <header className="bg-gray-900 dark:bg-gray-950 text-white dark:text-gray-100 border-b border-gray-800 dark:border-gray-900">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo et navigation principale */}
@@ -15,56 +18,39 @@ export default function Header() {
               <span className="font-bold text-xl">GitHub</span>
             </Link>
             
-            <nav className="hidden md:flex space-x-6">
-              <button className="flex items-center text-sm hover:text-gray-300">
-                Product
-                <ChevronDown className="ml-1 h-3 w-3" />
-              </button>
-              <button className="flex items-center text-sm hover:text-gray-300">
-                Solutions
-                <ChevronDown className="ml-1 h-3 w-3" />
-              </button>
-              <button className="flex items-center text-sm hover:text-gray-300">
-                Open Source
-                <ChevronDown className="ml-1 h-3 w-3" />
-              </button>
-              <button className="flex items-center text-sm hover:text-gray-300">
-                Pricing
-              </button>
-            </nav>
+            <NavigationMenu />
           </div>
 
           {/* Barre de recherche */}
           <div className="flex-1 max-w-lg mx-4">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 dark:text-gray-500" />
               <input
                 type="text"
                 placeholder="Search or jump to..."
-                className="w-full bg-gray-800 border border-gray-700 rounded-lg pl-10 pr-4 py-2 text-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="w-full bg-gray-800 dark:bg-gray-900 border border-gray-700 dark:border-gray-600 rounded-lg pl-10 pr-4 py-2 text-sm placeholder-gray-400 dark:placeholder-gray-500 text-white dark:text-gray-100 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               />
             </div>
           </div>
 
           {/* Actions utilisateur */}
           <div className="flex items-center space-x-4">
-            <Link to="/login" className="text-sm hover:text-gray-300 hidden lg:block">
+            <Link to="/login" className="text-sm hover:text-gray-300 dark:hover:text-gray-400 hidden lg:block">
               Sign in
             </Link>
-            <Link to="/signup" className="bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded-lg text-sm hidden lg:block">
+            <Link to="/signup" className="bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 px-3 py-1 rounded-lg text-sm hidden lg:block">
               Sign up
             </Link>
             
             <div className="flex items-center space-x-2">
-              <button className="p-2 hover:bg-gray-800 rounded-lg">
+              <ThemeToggle />
+              <button className="p-2 hover:bg-gray-800 dark:hover:bg-gray-700 rounded-lg">
                 <Bell className="h-4 w-4" />
               </button>
-              <button className="p-2 hover:bg-gray-800 rounded-lg">
+              <button className="p-2 hover:bg-gray-800 dark:hover:bg-gray-700 rounded-lg">
                 <Plus className="h-4 w-4" />
               </button>
-              <div className="h-8 w-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-xs font-bold">
-                V
-              </div>
+              <UserDropdown />
             </div>
           </div>
         </div>
